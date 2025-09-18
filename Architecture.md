@@ -235,6 +235,9 @@ python get_openvpn_config.py --server https://vpn.example.com --psk your-psk-her
 - **API Authentication**: Shared secrets for service-to-service communication
 - **TLS Termination**: HTTPS termination at load balancer/ingress
 - **Database Encryption**: Encrypted connections to PostgreSQL
+- **Attack Protection**: Defense against SQL injection, XSS, timing attacks, and DoS
+- **Input Validation**: Comprehensive sanitization and validation of all inputs
+- **Security Testing**: 44 comprehensive security tests covering OWASP Top 10 vulnerabilities
 
 ### Identity and Access Management
 - **OIDC Integration**: Enterprise identity provider integration

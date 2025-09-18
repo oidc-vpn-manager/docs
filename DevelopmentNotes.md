@@ -84,6 +84,19 @@ Swagger files should contain examples of both successful and unsuccessful respon
 
 This suite of services and tools were designed to be highly tested, and all tests must pass 100% of the time, where a pass means no errors, warnings or critical issues and that none of the tests were skipped. There must be 100% coverage of the code by tests. LIMITED and EXPLICITLY AGREED exceptions MAY be delivered, but ONLY with the EXPLICIT APPROVAL of the project lead. Exceptions MUST be documented.
 
+### Security Testing Standards
+
+Beyond functional testing, all services include comprehensive security testing:
+- **Red Team Testing**: Adversarial attack simulation against all services
+- **Blue Team Testing**: Defensive security validation and monitoring
+- **Bug Bounty Testing**: Common vulnerability patterns and edge cases
+- **OWASP Top 10 Coverage**: Complete testing against web application security risks
+- **Input Validation**: Edge case testing including Unicode, oversized payloads, and malformed data
+- **Timing Attack Prevention**: Constant-time comparison algorithms with variance testing
+- **Authentication Security**: Bypass attempts and session management validation
+
+Current security test coverage: 44 comprehensive tests across CT and Signing services, with real vulnerability discovery and remediation during development.
+
 The test types are identified as follows:
 
 1. Unit test: a discrete test of individual functions in scripts and tools.

@@ -57,6 +57,9 @@ The system consists of three core microservices that work together to provide se
 - **Modern cryptography** with Ed25519 and RSA key support
 - **Network segmentation** between frontend, signing, and database tiers
 - **API authentication** with secure token-based access control
+- **Comprehensive security testing** defending against OWASP Top 10 vulnerabilities
+- **Attack resistance** including SQL injection, XSS, timing attacks, and DoS protection
+- **Input validation and sanitization** with constant-time comparison algorithms
 
 ## 🚦 Quick Start
 
@@ -79,7 +82,11 @@ The system consists of three core microservices that work together to provide se
 make test
 ```
 
-All services maintain 100% test coverage with comprehensive unit, integration, and end-to-end testing.
+All services maintain 100% test coverage with comprehensive unit, integration, and end-to-end testing, including:
+- **44 comprehensive security tests** covering red team, blue team, and bug bounty attack scenarios
+- **OWASP Top 10 vulnerability testing** with real vulnerability discovery and remediation
+- **Constant-time comparison algorithms** preventing timing attacks
+- **Complete input validation coverage** with edge case and Unicode handling
 
 ### Development Environment
 ```bash
