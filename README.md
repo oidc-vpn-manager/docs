@@ -45,6 +45,8 @@ The system consists of three core microservices that work together to provide se
 
 ### Technical References
 - **[API Documentation](../services/frontend/app/assets/swagger/v1.yaml)** - Complete REST API specification
+- **[Function Call Mapping](Function%20Call%20Mapping.md)** - Complete function dependency mapping across all services
+- **[Route Execution Chains](Function%20Calls%20From%20Routes.md)** - Detailed execution traces from routes to leaf functions
 - **[Docker Deployment](../deploy/docker/README.md)** - Production Docker Compose setup
 - **[Kubernetes Deployment](../deploy/helm/README.md)** - Production Kubernetes Helm charts
 
@@ -115,7 +117,9 @@ Contributions are welcome! Since this is Free Software:
 - All code must pass linting and security checks
 - 100% test coverage requirement for all new code
 - Security-first design principles
-- Comprehensive documentation for all user-facing features
+- **Comprehensive function documentation** with examples, security considerations, and parameter documentation
+- **Complete route traceability** from API endpoints to leaf functions for debugging
+- **Security-focused documentation** including timing attack prevention and cryptographic rationale
 
 ## 📄 License
 

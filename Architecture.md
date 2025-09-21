@@ -173,11 +173,13 @@ python generate_pki.py --output-dir ./pki
 #### Usage
 ```bash
 # User profile retrieval
-python get_openvpn_config.py --server https://vpn.example.com
-python get_openvpn_config.py --server https://vpn.example.com --options tcp
+python get_openvpn_profile.py --server https://vpn.example.com
 
-# Server bundle retrieval
-python get_openvpn_config.py --server https://vpn.example.com --psk your-psk-here
+# Server bundle retrieval - for a centralise OpenVPN Server
+python get_openvpn_server_config.py --server https://vpn.example.com --psk your-psk-here
+
+# Computer profile retrieval - for an edge OpenVPN Client at a remote site
+python get_openvpn_server_config.py --server https://vpn.example.com --psk your-psk-here
 ```
 
 ## 🔄 Service Interactions

@@ -16,6 +16,28 @@ Security is in the forefront of design intentions. We aim for full coverage agai
 
 The application uses the TimeZone UTC at all times, and uses ISO 8601 style date and timestamps.
 
+## Development Documentation Standards
+
+Following comprehensive docstring audit and function mapping analysis:
+
+### Function Documentation Requirements
+- **All functions require comprehensive docstrings** including purpose, parameters, return values, exceptions, and examples
+- **Security considerations** must be documented for cryptographic, authentication, and input validation functions
+- **Timing attack prevention** and constant-time comparison usage must be explained
+- **Cryptographic algorithm choices** require rationale documentation
+
+### Code Traceability
+- **Complete function call mapping** is maintained in `docs/Function Call Mapping.md`
+- **Route execution chains** from API endpoints to leaf functions are documented in `docs/Function Calls From Routes.md`
+- **Function usage analysis** shows 96%+ utilization rate indicating excellent code health
+- **Technical debt management** through periodic unused function analysis
+
+### Documentation Quality Metrics
+- Critical API endpoints have comprehensive documentation with examples
+- Security functions include timing attack prevention explanations
+- Template rendering functions document injection prevention measures
+- Database models include relationship and constraint documentation
+
 ### Frontend
 
 This service serves as the "Front Door" to all applications. It offers a web interface which is authenticated to via OpenID Connect (OIDC). There are multiple roles for the Web Interface.
@@ -51,9 +73,9 @@ This is a READ-ONLY service, except for Signing Service processes which have an 
 
 To ensure that the Signing Service Certificate Authority (CA) chain can be replaced at any time, an Offline Root CA will be used. The PKI Tool is used to create the initial CA certificate and key and then generate one or more Intermediate CA certificates and keys, which can be distributed to the Signing Service.
 
-### Get OpenVPN Config Tool
+### Get OpenVPN Config Tools
 
-This command line tool is used by server administrators to automatically provision OpenVPN servers, and by OpenVPN users to automatically request new OpenVPN Configuration Files.
+These command line tools are used by server administrators to automatically provision OpenVPN servers, and by OpenVPN users and server administrators to automatically request new OpenVPN Configuration Files for themselves or the computers they manage.
 
 When used with a PSK there is no user interaction required, so it can be used in post-provisioning services like Ansible or Puppet, or during machine initialization using services like Cloud-Init.
 
@@ -117,7 +139,7 @@ make test_get_openvpn_config
 make test_pki_tool
 ```
 
-Or a wider test of all of those components can be issued by running `make just_test_without_browser`.
+Or a wider test of all of those components can be issued by running `make just_test_without_e2e`.
 
 Individual E2E tests CAN be run at any time, but if code in the services (not the testing code) has been altered, a full restart of the Docker containers must be triggered by running `make rebuild_docker` first, followed by the individual E2E test.
 
