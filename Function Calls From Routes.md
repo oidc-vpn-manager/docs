@@ -331,12 +331,15 @@ Handler: computer_bundle(psk_object)
 ├── TLS-Crypt Key Processing
 │   ├── current_app.config.get('OPENVPN_TLS_CRYPT_KEY')
 │   ├── process_tls_crypt_key()
-│   │   ├── base64.b64decode() master key
-│   │   ├── hashlib.sha256() device-specific hash
-│   │   ├── derived key generation
-│   │   └── base64.b64encode() device key
-│   │
-│   └── version detection
+│   │   ├── Parse PEM format and detect version from header
+│   │   ├── V1 (Static Key): Return key unchanged
+│   │   ├── V2 (Server Key): Generate unique client key
+│   │   │   ├── TLSCryptV2Key(bytes.fromhex(key_data))
+│   │   │   ├── os.urandom(16) for IV
+│   │   │   ├── Cipher(algorithms.AES, modes.CTR) for key derivation
+│   │   │   └── Format as V2 Client Key PEM
+│   │   │
+│   │   └── Return (version, client_key_pem)
 │
 ├── Template Context Preparation
 │   ├── base_context dictionary construction

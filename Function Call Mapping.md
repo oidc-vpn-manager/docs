@@ -169,9 +169,15 @@ generate_key_and_csr()
 └── csr.sign()
 
 process_tls_crypt_key()
-├── base64.b64decode()
-├── hashlib.sha256()
-└── base64.b64encode()
+├── str.split() - Parse PEM lines
+├── str.startswith() - Detect BEGIN line
+├── TLSCryptV2Key.__init__()
+│   └── bytes.fromhex() - Parse hex key data
+├── TLSCryptV2Key.generate_client_key()
+│   ├── os.urandom() - Generate IV
+│   ├── Cipher(algorithms.AES, modes.CTR) - Initialize cipher
+│   └── encryptor.update() + encryptor.finalize() - Derive client key
+└── str formatting - Build V2 Client Key PEM
 ```
 
 #### **Template Rendering**
