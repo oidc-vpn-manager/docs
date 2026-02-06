@@ -193,12 +193,12 @@ docker-compose exec postgres-certtransparency pg_dump -U ct_user ct_db > ct_back
 
 2. **Create Namespace**
    ```bash
-   kubectl create namespace openvpn-manager
+   kubectl create namespace oidc-vpn-manager
    ```
 
 3. **Prepare Configuration**
    ```bash
-   cd deploy/helm/openvpn-manager
+   cd deploy/helm/oidc-vpn-manager
    cp values.yaml values-production.yaml
    # Edit values-production.yaml with your settings
    ```
@@ -250,33 +250,33 @@ Create database credentials secret:
 kubectl create secret generic external-db-credentials \
   --from-literal=frontend-password='frontend_password' \
   --from-literal=ct-password='ct_password' \
-  -n openvpn-manager
+  -n oidc-vpn-manager
 ```
 
 4. **Create Application Secrets**
    ```bash
    # OIDC client secret
-   kubectl create secret generic openvpn-manager-oidc-client-secret \
+   kubectl create secret generic oidc-vpn-manager-oidc-client-secret \
      --from-literal=client-secret='your-oidc-client-secret' \
-     -n openvpn-manager
+     -n oidc-vpn-manager
    
    # CA key passphrase
-   kubectl create secret generic openvpn-manager-ca-key-passphrase \
+   kubectl create secret generic oidc-vpn-manager-ca-key-passphrase \
      --from-literal=passphrase='your-ca-key-passphrase' \
-     -n openvpn-manager
+     -n oidc-vpn-manager
    
    # PKI materials
-   kubectl create secret generic openvpn-manager-pki \
+   kubectl create secret generic oidc-vpn-manager-pki \
      --from-file=root-ca.crt=path/to/root-ca.crt \
      --from-file=intermediate-ca.crt=path/to/intermediate-ca.crt \
      --from-file=intermediate-ca.key=path/to/intermediate-ca.key \
-     -n openvpn-manager
+     -n oidc-vpn-manager
    ```
 
 5. **Deploy Application**
    ```bash
-   helm install openvpn-manager ./openvpn-manager \
-     --namespace openvpn-manager \
+   helm install oidc-vpn-manager ./oidc-vpn-manager \
+     --namespace oidc-vpn-manager \
      --values values-production.yaml
    ```
 
@@ -295,7 +295,7 @@ frontend:
     openvpnServerHostname: "vpn.yourcompany.com"
     oidc:
       discoveryUrl: "https://auth.yourcompany.com/.well-known/openid-configuration"
-      clientId: "openvpn-manager-prod"
+      clientId: "oidc-vpn-manager-prod"
       adminGroup: "vpn-administrators"
 
 ingress:
@@ -349,23 +349,23 @@ monitoring:
 
 ```bash
 # Check deployment status
-kubectl get pods -n openvpn-manager
-helm status openvpn-manager -n openvpn-manager
+kubectl get pods -n oidc-vpn-manager
+helm status oidc-vpn-manager -n oidc-vpn-manager
 
 # View application logs
-kubectl logs -n openvpn-manager deployment/openvpn-manager-frontend
-kubectl logs -n openvpn-manager deployment/openvpn-manager-signing
+kubectl logs -n oidc-vpn-manager deployment/oidc-vpn-manager-frontend
+kubectl logs -n oidc-vpn-manager deployment/oidc-vpn-manager-signing
 
 # Scale services
-kubectl scale deployment openvpn-manager-frontend --replicas=5 -n openvpn-manager
+kubectl scale deployment oidc-vpn-manager-frontend --replicas=5 -n oidc-vpn-manager
 
 # Update deployment
-helm upgrade openvpn-manager ./openvpn-manager \
-  --namespace openvpn-manager \
+helm upgrade oidc-vpn-manager ./oidc-vpn-manager \
+  --namespace oidc-vpn-manager \
   --values values-production.yaml
 
 # Database access (if using included PostgreSQL)
-kubectl exec -it -n openvpn-manager deployment/openvpn-manager-postgresql -- psql -U postgres
+kubectl exec -it -n oidc-vpn-manager deployment/oidc-vpn-manager-postgresql -- psql -U postgres
 ```
 
 ## 🔐 Security Considerations
