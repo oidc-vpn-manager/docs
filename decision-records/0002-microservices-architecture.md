@@ -8,7 +8,7 @@ Approved
 
 ## Context
 
-The OpenVPN Manager application is designed as a suite of services to provide secure access to computers and services in a managed environment. The application is composed of several distinct components with specific responsibilities: a frontend for user interaction and API access, a signing service for handling cryptographic operations, and a certificate transparency service for logging all certificate-related actions. This separation of concerns requires a clear architectural pattern to manage the interactions between components.
+The OIDC VPN Manager application is designed as a suite of services to provide secure access to computers and services in a managed environment. The application is composed of several distinct components with specific responsibilities: a frontend for user interaction and API access, a signing service for handling cryptographic operations, and a certificate transparency service for logging all certificate-related actions. This separation of concerns requires a clear architectural pattern to manage the interactions between components.
 
 ## Decision
 

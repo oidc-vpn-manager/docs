@@ -1,14 +1,14 @@
-# Using OpenVPN Manager - User Guide
+# Using OIDC VPN Manager - User Guide
 
-This guide covers how end users can generate and download OpenVPN profiles using OpenVPN Manager's web interface.
+This guide covers how end users can generate and download OpenVPN profiles using OIDC VPN Manager's web interface.
 
 ## 🚀 Getting Started
 
-OpenVPN Manager provides a self-service portal for users to generate their own OpenVPN certificates and configuration files. The system integrates with your organization's OIDC identity provider (such as Azure AD, Okta, or Google Workspace) for secure authentication.
+OIDC VPN Manager provides a self-service portal for users to generate their own OpenVPN certificates and configuration files. The system integrates with your organization's OIDC identity provider (such as Azure AD, Okta, or Google Workspace) for secure authentication.
 
 ### Prerequisites
 
-- Access to your organization's OpenVPN Manager instance
+- Access to your organization's OIDC VPN Manager instance
 - Valid account with your organization's identity provider (OIDC)
 - Modern web browser with JavaScript enabled
 
@@ -16,11 +16,11 @@ OpenVPN Manager provides a self-service portal for users to generate their own O
 
 ### Web Browser Authentication
 
-1. **Navigate** to your organization's OpenVPN Manager URL (e.g., `https://vpn.yourcompany.com`)
+1. **Navigate** to your organization's OIDC VPN Manager URL (e.g., `https://vpn.yourcompany.com`)
 2. **Click** the "Generate Profile" button
 3. **Authenticate** using your organization's single sign-on (SSO) system
 4. **Complete** any multi-factor authentication (MFA) requirements
-5. **Return** to the OpenVPN Manager portal automatically
+5. **Return** to the OIDC VPN Manager portal automatically
 
 The system uses OpenID Connect (OIDC) to integrate with enterprise identity providers, ensuring that only authorized users can generate certificates.
 
@@ -36,7 +36,7 @@ After authentication, you'll see the main profile generation interface:
 
 ### Step 2: Select Connection Options
 
-OpenVPN Manager supports multiple connection methods:
+OIDC VPN Manager supports multiple connection methods:
 
 - **UDP on port 1194** (default): Best performance for most users
 - **TCP on port 443**: Better for restrictive networks and firewalls
@@ -115,12 +115,12 @@ The download uses a secure, time-limited token to ensure your certificate is del
 
 ## 🛠️ Command-Line Tool
 
-For advanced users and automation, OpenVPN Manager provides a command-line tool for profile retrieval.
+For advanced users and automation, OIDC VPN Manager provides a command-line tool for profile retrieval.
 
 ### Installation
 
 ```bash
-# Download the tool from your OpenVPN Manager instance
+# Download the tool from your OIDC VPN Manager instance
 curl -o get_openvpn_config.py https://vpn.yourcompany.com/tools/get_openvpn_config.py
 
 # Make it executable
@@ -227,7 +227,7 @@ Include in your support request:
 
 ---
 
-**Stay Connected**: OpenVPN Manager makes it easy to maintain secure access to your organization's resources. Generate profiles as needed and keep your certificates current for the best security posture.
+**Stay Connected**: OIDC VPN Manager makes it easy to maintain secure access to your organization's resources. Generate profiles as needed and keep your certificates current for the best security posture.
 
 ## 🤖 AI Assistance Disclosure
 

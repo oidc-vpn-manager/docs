@@ -1,10 +1,10 @@
-# OpenVPN Manager Deployment Guide
+# OIDC VPN Manager Deployment Guide
 
-This guide covers production deployment of OpenVPN Manager using both Docker Compose and Kubernetes/Helm options.
+This guide covers production deployment of OIDC VPN Manager using both Docker Compose and Kubernetes/Helm options.
 
 ## 🏗️ Deployment Architecture
 
-OpenVPN Manager is designed to run in containerized environments with the following components:
+OIDC VPN Manager is designed to run in containerized environments with the following components:
 
 - **Frontend Service**: Web UI and API gateway
 - **Signing Service**: Certificate signing and cryptographic operations  
@@ -447,4 +447,4 @@ CRYPTO_CACHE_SIZE=1000
 
 ---
 
-This deployment guide provides flexible options for running OpenVPN Manager in production environments with both self-hosted and managed database options.
+This deployment guide provides flexible options for running OIDC VPN Manager in production environments with both self-hosted and managed database options.

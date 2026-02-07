@@ -1,4 +1,4 @@
-# OpenVPN Manager - Route to Function Chains Mapping
+# OIDC VPN Manager - Route to Function Chains Mapping
 
 ## Overview
 
@@ -1212,7 +1212,7 @@ This comprehensive route-to-function mapping provides complete traceability from
 - Path traversal prevention in file operations
 - API secret verification for service communication
 
-This mapping serves as a foundation for performance optimization, security analysis, debugging, and architectural understanding of the OpenVPN Manager system.
+This mapping serves as a foundation for performance optimization, security analysis, debugging, and architectural understanding of the OIDC VPN Manager system.
 
 <function_calls>
 <invoke name="TodoWrite">

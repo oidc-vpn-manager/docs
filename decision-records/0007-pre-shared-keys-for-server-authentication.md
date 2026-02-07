@@ -8,7 +8,7 @@ Approved
 
 ## Context
 
-Automated server provisioning requires a secure and non-interactive method for a new server to authenticate with the OpenVPN Manager to obtain its initial configuration bundle. This process needs to be simple enough to be used in automated tools like Ansible, Puppet, or cloud-init scripts.
+Automated server provisioning requires a secure and non-interactive method for a new server to authenticate with the OIDC VPN Manager to obtain its initial configuration bundle. This process needs to be simple enough to be used in automated tools like Ansible, Puppet, or cloud-init scripts.
 
 ## Decision
 

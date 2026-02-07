@@ -8,7 +8,7 @@ Approved
 
 ## Context
 
-The OpenVPN Manager frontend service was originally designed as a monolithic service serving both user-facing and administrator-facing functionality in a single deployment. As organizations scale their VPN operations, there is a need to separate user-facing services from administrative services for security isolation, different scaling requirements, and operational separation.
+The OIDC VPN Manager frontend service was originally designed as a monolithic service serving both user-facing and administrator-facing functionality in a single deployment. As organizations scale their VPN operations, there is a need to separate user-facing services from administrative services for security isolation, different scaling requirements, and operational separation.
 
 Users typically need to access profile generation and certificate downloads frequently, while administrators need access to certificate management, PSK creation, and audit logs. These different user types have different security requirements, traffic patterns, and scaling needs.
 

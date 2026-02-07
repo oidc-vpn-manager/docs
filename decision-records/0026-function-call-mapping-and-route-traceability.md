@@ -8,7 +8,7 @@ Approved
 
 ## Context
 
-As the OpenVPN Manager codebase has grown with three microservices and multiple tools, understanding the complete execution flow from HTTP requests to leaf functions has become challenging. Debugging issues requires tracing through multiple services, decorators, and function calls.
+As the OIDC VPN Manager codebase has grown with three microservices and multiple tools, understanding the complete execution flow from HTTP requests to leaf functions has become challenging. Debugging issues requires tracing through multiple services, decorators, and function calls.
 
 The need for comprehensive function mapping was highlighted by:
 - Complex certificate generation workflows spanning 15-25+ function calls

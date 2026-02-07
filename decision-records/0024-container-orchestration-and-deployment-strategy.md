@@ -8,7 +8,7 @@ Approved
 
 ## Context
 
-The OpenVPN Manager microservices architecture requires orchestration and deployment strategies that support different environments from development to enterprise production. The system consists of multiple services (frontend, signing, Certificate Transparency) that need coordinated deployment, health checking, and scaling.
+The OIDC VPN Manager microservices architecture requires orchestration and deployment strategies that support different environments from development to enterprise production. The system consists of multiple services (frontend, signing, Certificate Transparency) that need coordinated deployment, health checking, and scaling.
 
 Current implementation provides Docker Compose configurations for development and testing, with Helm charts available for Kubernetes deployments. A clear strategy is needed to define the supported deployment patterns and their appropriate use cases.
 

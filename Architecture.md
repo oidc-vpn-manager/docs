@@ -1,10 +1,10 @@
-# OpenVPN Manager Architecture
+# OIDC VPN Manager Architecture
 
-This document provides a comprehensive overview of the OpenVPN Manager system architecture, component interactions, and technical design decisions.
+This document provides a comprehensive overview of the OIDC VPN Manager system architecture, component interactions, and technical design decisions.
 
 ## 🏗️ System Overview
 
-OpenVPN Manager follows a microservice architecture pattern with clear separation of concerns between certificate management, signing operations, and audit logging. The system is designed for security, scalability, and operational simplicity.
+OIDC VPN Manager follows a microservice architecture pattern with clear separation of concerns between certificate management, signing operations, and audit logging. The system is designed for security, scalability, and operational simplicity.
 
 ```
 ┌─────────────┐    ┌──────────────┐    ┌─────────────────────┐

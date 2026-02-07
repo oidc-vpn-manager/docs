@@ -8,7 +8,7 @@ Approved
 
 ## Context
 
-Following a comprehensive docstring audit of the OpenVPN Manager codebase, we discovered inconsistent documentation quality across functions and methods. While some modules like `signing_client.py` had excellent documentation, critical API endpoints and core business logic lacked comprehensive docstrings with examples, security considerations, and proper parameter documentation.
+Following a comprehensive docstring audit of the OIDC VPN Manager codebase, we discovered inconsistent documentation quality across functions and methods. While some modules like `signing_client.py` had excellent documentation, critical API endpoints and core business logic lacked comprehensive docstrings with examples, security considerations, and proper parameter documentation.
 
 The audit revealed:
 - 43% of modules had adequate docstrings

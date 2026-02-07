@@ -1,8 +1,8 @@
-# OpenVPN Manager - Function Call Mapping
+# OIDC VPN Manager - Function Call Mapping
 
 ## Overview
 
-This document provides a comprehensive mapping of function calls and dependencies across the OpenVPN Manager codebase. It analyzes call chains from entry points (Flask routes, CLI commands) to leaf functions, helping understand code flow and dependencies.
+This document provides a comprehensive mapping of function calls and dependencies across the OIDC VPN Manager codebase. It analyzes call chains from entry points (Flask routes, CLI commands) to leaf functions, helping understand code flow and dependencies.
 
 ## Analysis Methodology
 
@@ -562,4 +562,4 @@ Timeouts: 5-30 seconds per request
 - Request tracking and audit logging
 - Usage statistics collection
 
-This function call mapping provides a comprehensive view of code dependencies and execution flow across the OpenVPN Manager system, enabling better understanding of system architecture and facilitating maintenance and debugging efforts.
+This function call mapping provides a comprehensive view of code dependencies and execution flow across the OIDC VPN Manager system, enabling better understanding of system architecture and facilitating maintenance and debugging efforts.

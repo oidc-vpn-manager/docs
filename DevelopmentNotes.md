@@ -1,4 +1,4 @@
-# Development Notes for OpenVPN Manager
+# Development Notes for OIDC VPN Manager
 
 ## Clarifications on the roles of each of the components
 
@@ -85,9 +85,9 @@ When used without a PSK, the tool invokes the user's browser to perform an OIDC 
 
 ### User requests a Configuration Profile in a web browser.
 
-1. User accesses the OpenVPN Manager "Frontend" front page.
+1. User accesses the OIDC VPN Manager "Frontend" front page.
 2. If the user has not authenticated, an OIDC authentication flow is started.
-3. Following a successful authentication request from an authorized user in the OIDC service, the user is redirected back to the OpenVPN Manager Frontend. The OIDC request returns the user's details and one or more groups they are affiliated to. These group affiliations are used to determine what, if any, role above "User" they are granted.
+3. Following a successful authentication request from an authorized user in the OIDC service, the user is redirected back to the OIDC VPN Manager Frontend. The OIDC request returns the user's details and one or more groups they are affiliated to. These group affiliations are used to determine what, if any, role above "User" they are granted.
 4. On the page they are returned to, the user is able to generate a Configuration Profile. They optionally select zero or more options from the provided list, and click "Generate". The supplied file has the relevant MIME Type to allow automatic ingestion into an OpenVPN application, should one exist.
 
 ### User's device obtains a Configuration Profile using the Get OpenVPN Config script

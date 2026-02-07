@@ -8,7 +8,7 @@ Approved
 
 ## Context
 
-The OpenVPN Manager microservices architecture requires persistent data storage for multiple services. The frontend service needs to store user sessions, PSKs, download tokens, and configuration. The Certificate Transparency service needs to store an immutable audit log of all certificate operations with efficient search capabilities.
+The OIDC VPN Manager microservices architecture requires persistent data storage for multiple services. The frontend service needs to store user sessions, PSKs, download tokens, and configuration. The Certificate Transparency service needs to store an immutable audit log of all certificate operations with efficient search capabilities.
 
 Different services have different data consistency, performance, and scalability requirements. The choice of database technology and schema management approach affects deployment complexity, operational overhead, and system reliability.
 

@@ -8,7 +8,7 @@ Approved
 
 ## Context
 
-The OpenVPN Manager is a security-critical application responsible for managing network access. Bugs or regressions could have significant security implications. Therefore, a high degree of confidence in the correctness and reliability of the code is required.
+The OIDC VPN Manager is a security-critical application responsible for managing network access. Bugs or regressions could have significant security implications. Therefore, a high degree of confidence in the correctness and reliability of the code is required.
 
 ## Decision
 

@@ -1,6 +1,6 @@
-# Using OpenVPN Manager - Administrator Guide
+# Using OIDC VPN Manager - Administrator Guide
 
-This guide covers administrative functions in OpenVPN Manager, including pre-shared key (PSK) management, certificate transparency review, and system monitoring.
+This guide covers administrative functions in OIDC VPN Manager, including pre-shared key (PSK) management, certificate transparency review, and system monitoring.
 
 ## 🔐 Administrator Access
 
@@ -176,7 +176,7 @@ spec:
 
 ### Health Monitoring
 
-Monitor OpenVPN Manager component health:
+Monitor OIDC VPN Manager component health:
 
 - **Service availability**: Ensure all microservices are responding
 - **Database connectivity**: Verify PostgreSQL connections
@@ -322,7 +322,7 @@ For issues requiring external support:
 
 ---
 
-**Administrative Excellence**: Effective OpenVPN Manager administration ensures secure, reliable certificate management for your organization. Regular monitoring, maintenance, and security practices keep the system running smoothly and securely.
+**Administrative Excellence**: Effective OIDC VPN Manager administration ensures secure, reliable certificate management for your organization. Regular monitoring, maintenance, and security practices keep the system running smoothly and securely.
 
 ## 🤖 AI Assistance Disclosure
 

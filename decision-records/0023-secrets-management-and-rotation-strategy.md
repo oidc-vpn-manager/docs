@@ -8,7 +8,7 @@ Approved
 
 ## Context
 
-The OpenVPN Manager system requires secure handling of multiple types of secrets: API keys for inter-service communication, OIDC client secrets, database passwords, CA private keys, and TLS certificates. These secrets have different rotation requirements, security sensitivity levels, and access patterns.
+The OIDC VPN Manager system requires secure handling of multiple types of secrets: API keys for inter-service communication, OIDC client secrets, database passwords, CA private keys, and TLS certificates. These secrets have different rotation requirements, security sensitivity levels, and access patterns.
 
 Current implementation stores secrets in environment variables and configuration files, which presents security risks for production deployments. A comprehensive secrets management strategy is needed to ensure secure storage, rotation, and access control.
 

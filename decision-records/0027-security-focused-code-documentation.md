@@ -18,7 +18,7 @@ Security documentation gaps included:
 - Cross-service authentication mechanisms
 - Constant-time comparison implementations
 
-The OpenVPN Manager handles sensitive cryptographic operations and certificate management, making security documentation critical for maintaining system integrity and enabling security reviews.
+The OIDC VPN Manager handles sensitive cryptographic operations and certificate management, making security documentation critical for maintaining system integrity and enabling security reviews.
 
 ## Decision
 
