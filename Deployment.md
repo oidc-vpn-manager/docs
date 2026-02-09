@@ -56,8 +56,7 @@ OIDC VPN Manager is designed to run in containerized environments with the follo
    # Update OIDC settings in .env.frontend
    OIDC_DISCOVERY_URL=https://your-oidc-provider.com/.well-known/openid-configuration
    OIDC_CLIENT_ID=your-production-client-id
-   OPENVPN_SERVER_HOSTNAME=vpn.yourdomain.com
-   
+
    # Update domain in docker-compose.yml and nginx.conf
    # Replace vpn.yourdomain.com with your actual domain
    ```
@@ -127,7 +126,6 @@ OIDC_DISCOVERY_URL=https://your-oidc-provider.com/.well-known/openid-configurati
 OIDC_CLIENT_ID=your-production-client-id
 OIDC_CLIENT_SECRET_FILE=/run/secrets/oidc_client_secret
 OIDC_ADMIN_GROUP=vpn-admins
-OPENVPN_SERVER_HOSTNAME=vpn.yourdomain.com
 ```
 
 **Signing Service (`.env.signing`)**:
@@ -292,7 +290,6 @@ global:
 frontend:
   replicaCount: 3
   config:
-    openvpnServerHostname: "vpn.yourcompany.com"
     oidc:
       discoveryUrl: "https://auth.yourcompany.com/.well-known/openid-configuration"
       clientId: "oidc-vpn-manager-prod"
